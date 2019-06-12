@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="../../main.css">
+<head>
+  <title>1 in 100 XSS</title>
+  <meta charset="utf-8"/>
+</head>
+<body>
+  <h1>1 in 100 Page Load XSS Case Study</h1>
+  <h2 id="name"></h2>
+  <ul>
+    <li>Complicated website</li>
+    <li>A lot of JS</li>
+    <li>EV is yelling about .innerHTML constantly</li>
+    <li>Visit a page, EV screams about an interesting result</li>
+    <li>Hard refresh, nothing...</li>
+    <li>One of the ads being loaded in the page had XSS</li>
+    <li>Single quote escape, no `decodeURI`, hmm....</li>
+  </ul>
+  <script src="../../lib.js"></script>
+</body>
+</html>

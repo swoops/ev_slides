@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body {
+  padding: 24px 24px 32px 24px;
+  background: #111;
+  color: #859900;
+  font-size: 16px;
+  font-family: 'Open Sans',arial,helvetica,sans-serif;
+  font-weight: 400;
+}
+
+
+h1 {
+  text-align: center;
+  padding-left: 10%;
+}
+
+h2 {
+  text-align: left;
+  padding-left: 10%;
+}
+
+ul {
+  text-align: left;
+  padding-left: 10%;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

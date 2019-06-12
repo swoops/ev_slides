@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="../../main.css">
+<head>
+  <title>What is it</title>
+  <meta charset="utf-8"/>
+</head>
+<body>
+  <h1>What is Eval Villain?</h1>
+  <ul id="here"> </ul> <!-- DON'T REMOVE -->
+  <script src="../../lib.js"></script>
+</body>
+<script>
+  eval("'EV lets you see eval calls'");
+  let ul = document.getElementById("here");
+  ul.innerHTML = '<li>Firefox Web Extension (Chrome lacks <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/contentScripts/register">browser.contentScripts.register</a>)</li>'
+  ul.innerHTML += '<li>Hooks native JavaScript functions/setters (ltrace for browser)</li>';
+  ul.innerHTML += '<li>Hooked functions then display thier input on the console</li>';
+  ul.innerHTML += '<li>Functions are hooked before inline script runs</li>';
+  ul.innerHTML += '<li>Features to reduce noise and highlight important information</li>';
+</script>
+</html>

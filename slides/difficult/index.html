@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="../../main.css">
+<head>
+  <title>DOM XSS</title>
+  <meta charset="utf-8"/>
+</head>
+<body>
+  <h1>Yeah you got Source, but it's JavaScript</h1>
+  <ul>
+    <li>Bloated</li>
+    <li>Minified</li>
+    <li>Obfuscation</li>
+    <li>Machine written code</li>
+    <li>Confusing scope</li>
+    <li>Can't just grep for eval because `e = eval;....e(t);`</li>
+    <li>Looking forward to  WASM (<a href="https://i.blackhat.com/us-18/Thu-August-9/us-18-Lukasiewicz-WebAssembly-A-New-World-of-Native_Exploits-On-The-Web-wp.pdf">buffer overflow -> DOM XSS</a>)</li>
+    <li>Sometimes server side code plays a part in exploitation</li>
+  </ul>
+  <script src="../../lib.js"></script>
+</body>
+</html>
