@@ -1,2 +1,2 @@
 # ev_slides
-HTML/JS slides for Eval Villian presnetation
+HTML/JS slides for Eval Villain presentation
