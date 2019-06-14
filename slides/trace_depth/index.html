@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" type="text/css" href="../../main.css">
-<head>
-  <title>DOM XSS</title>
-  <meta charset="utf-8"/>
-</head>
-<body>
-  <h1>Stack Trace of Eval call on a YouTube video.</h1>
-  <h2>Eval call is 50 functions deep, 4 separate JS files</h2>
-  <img src="ss.png"/>
-  <script src="../../lib.js"></script>
-</body>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../../main.css">
+        <title>DOM XSS</title>
+        <meta charset="utf-8"/>
+    </head>
+    <body>
+        <div style="container">
+            <h1>Stack Trace of Eval call on a YouTube video.</h1>
+            <h2>Eval call is 50 functions deep, 4 separate JS files</h2>
+            <img src="ss.png"/>
+        </div>
+        <script src="../../lib.js"></script>
+    </body>
 </html>

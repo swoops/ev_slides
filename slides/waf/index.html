@@ -1,47 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" type="text/css" href="../../main.css">
-<head>
-  <title>WAF Example</title>
-  <meta charset="utf-8"/>
-</head>
-<body>
-  <h1 id="win">WAF Crack ME</h1>
-  <h2 id="test"></h2>
-  <ul>
-    <li>Get XSS on this page</li>
-    <li>2 separate vectors exist</li>
-    <li>Pretend the `waf` function is a real WAF</li>
-    <li id="hint1">*** HINT1 Click ***</li>
-    <li id="hint2">*** HINT2 Click ***</li>
-  </ul>
-  <script src="../../lib.js"></script>
-  <script>
-    document.getElementById('hint1').onclick = function(){
-      this.innerText = atob('VVJMJ3MgYXJlIGhhcmQgdG8gcGFyc2U=');
-    }
-    document.getElementById('hint2').onclick = function(){
-      this.innerText = atob('V2hhdCB3b3VsZCBhIHJlYWwgV0FGIGZhaWwgdG8gc2VlPw==');
-    }
-    function waf(){
-      let url = new URL(location.href);
-      for (let i of url.searchParams){
-        if ( /[\x27\x22\x3c\x3e]/.test(i[1]) ){
-          return false;
-        }
-      }
-      return true;
-    }
-    if ( waf() ){
-      if ( name ) {
-        document.getElementById('win').innerHTML += ` (${name})`;
-      }
-      let match = location.href.match(/^.*[\?&]test=([^&#]*)/);
-      if ( match && match.length > 1 ){
-        eval(`test = '${match[1]}';`);
-        document.getElementById("test").innerHTML = `Welcome ${test}`;
-      }
-    }
-  </script>
-</body>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../../main.css">
+        <title>WAF Example</title>
+        <meta charset="utf-8"/>
+    </head>
+    <body>
+        <div style="container">
+            <h1 id="win">WAF Crack ME</h1>
+            <h2 id="test"></h2>
+            <ul>
+                <li>Get XSS on this page</li>
+                <li>2 separate vectors exist</li>
+                <li>Pretend the `waf` function is a real WAF</li>
+                <li id="hint1">*** HINT1 Click ***</li>
+                <li id="hint2">*** HINT2 Click ***</li>
+            </ul>
+        </div>
+        <script src="../../lib.js"></script>
+        <script>
+            document.getElementById('hint1').onclick = function(){
+                this.innerText = atob('VVJMJ3MgYXJlIGhhcmQgdG8gcGFyc2U=');
+            }
+            document.getElementById('hint2').onclick = function(){
+                this.innerText = atob('V2hhdCB3b3VsZCBhIHJlYWwgV0FGIGZhaWwgdG8gc2VlPw==');
+            }
+            function waf(){
+                let url = new URL(location.href);
+                for (let i of url.searchParams){
+                    if ( /[\x27\x22\x3c\x3e]/.test(i[1]) ){
+                        return false;
+                    }
+                }
+                return true;
+            }
+            if ( waf() ){
+                if ( name ) {
+                    document.getElementById('win').innerHTML += ` (${name})`;
+                }
+                let match = location.href.match(/^.*[\?&]test=([^&#]*)/);
+                if ( match && match.length > 1 ){
+                    eval(`test = '${match[1]}';`);
+                    document.getElementById("test").innerHTML = `Welcome ${test}`;
+                }
+            }
+        </script>
+    </body>
 </html>
