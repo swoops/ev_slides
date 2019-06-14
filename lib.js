@@ -60,6 +60,7 @@ function makeNav(){
     a.id = id;
     a.innerText = text;
     a.href = href;
+    a.style.visibility = "hidden"
     return a;
   }
 
