@@ -1,6 +1,5 @@
 var slides = [
   "into",
-  "why_stay",
   "whoami",
   "slide_info",
   "instalation",
