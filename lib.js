@@ -13,6 +13,7 @@ var slides = [
 	"features",
 	"needle",
 	"100story",
+	"thanks",
 	"waf",
 ];
 
